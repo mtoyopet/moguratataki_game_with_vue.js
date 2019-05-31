@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS Tutorial</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+  <div id="mogura-game">
+    <div v-show="end">
+      <h1>もぐらたたきゲームだよ</h1>
+      <button type="button" name="button" v-on:click="startGame()" v-show="show">スタート</button>
+      <p class="point" v-show="!show">{{ point }}点だよ</p>
+    </div>
+    <div v-show="youWin">
+      <h1>You WIN!!!!!</h1>
+    </div>
+    <div>
+      <img class="get-a-mogura" v-bind:src="images.ana" v-on:click="hit()" />
+      <img class="get-a-mogura" v-bind:src="images.ana" v-on:click="hit()" />
+      <img class="get-a-mogura" v-bind:src="images.ana" v-on:click="hit()" />
+    </div>
+    <div>
+      <img class="get-a-mogura" v-bind:src="images.ana" v-on:click="hit()" />
+      <img class="get-a-mogura" v-bind:src="images.ana" v-on:click="hit()" />
+      <img class="get-a-mogura" v-bind:src="images.ana" v-on:click="hit()" />
+    </div>
+    <div>
+      <img class="get-a-mogura" v-bind:src="images.ana" v-on:click="hit()" />
+      <img class="get-a-mogura" v-bind:src="images.ana" v-on:click="hit()" />
+      <img class="get-a-mogura" v-bind:src="images.ana" v-on:click="hit()" />
+    </div>
+  </div>
+  <script src="mogura.js"></script>
+  </body>
+</html>
